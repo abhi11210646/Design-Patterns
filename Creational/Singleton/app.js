@@ -1,5 +1,6 @@
 const singleton = (function () {
     let instance = null;
+    // 2nd version
     class DB {
         constructor() { console.log("DB constructor called") }
     }
@@ -10,8 +11,10 @@ const singleton = (function () {
         // },
         // 2nd version
         getInstance: function () {
+
             if (!instance) {
                 instance = new DB();
+                instance.constructor = null;
             }
             return instance;
         }
@@ -21,8 +24,7 @@ const singleton = (function () {
 console.log(singleton.getInstance() === singleton.getInstance()); //true
 
 
-
-// Default behavior of ES2015
+// JavaScript has native support
 const singletonDefault = require("./default");
 const singletonDefault2 = require("./default");
 
