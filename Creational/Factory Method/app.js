@@ -5,6 +5,4 @@ function main() {
     console.log(imageFactory.createImage('png','cat'));
 }
 
-
-
 main();

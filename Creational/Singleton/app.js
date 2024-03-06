@@ -1,4 +1,4 @@
-const singleton = (function () {
+const Singleton = (function () {
     let instance = null;
     // 2nd version
     class DB {
@@ -9,19 +9,16 @@ const singleton = (function () {
         //     if (!instance) instance = new Object("object of DB");
         //     return instance;
         // },
-        // 2nd version
         getInstance: function () {
-
             if (!instance) {
                 instance = new DB();
-                instance.constructor = null;
             }
             return instance;
         }
     }
 })();
 
-console.log(singleton.getInstance() === singleton.getInstance()); //true
+console.log(Singleton.getInstance() === Singleton.getInstance()); //true
 
 
 // JavaScript has native support
