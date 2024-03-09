@@ -14,5 +14,5 @@ import ServiceProxy from "./serviceProxy.mjs"
 
 })()
 
-// Another use case with migration could "Double writes"(depends on application data)
-// So you write to both of services  adn read from service1 by proxy and side by side you migrate old data.
+// Another use case with migration could be "Double writes"(depends on application data)
+// So you write to both of services and read from service1 by proxy and side by side you migrate old data.
