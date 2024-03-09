@@ -1,5 +1,6 @@
 
 export class Singleton {
+   name = "Singleton class"
    // should not be accessible from outside
    private static instance: Singleton | null = null;
    private constructor() { }
@@ -9,7 +10,10 @@ export class Singleton {
       return Singleton.instance;
    }
    getName() {
-      return "name";
+      return this.name;
    }
 }
-console.log(Singleton.getInstance())
+
+console.log(Singleton.getInstance() == Singleton.getInstance());
+
+console.log(Singleton.getInstance().getName());

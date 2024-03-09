@@ -1,6 +1,6 @@
-class DB {
-    constructor() { console.log("DB constructor called") }
-}
 
+// JavaScript has native support
+const singletonDefault = require("./db");
+const singletonDefault2 = require("./db");
 
-module.exports = new DB();
+console.log(singletonDefault === singletonDefault2);  //true
