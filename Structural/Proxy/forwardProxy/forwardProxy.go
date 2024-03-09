@@ -16,7 +16,7 @@ var blokedSites = map[string]bool{
 
 func (i *ForwardProxy) access(url string) string {
 	if blokedSites[url] {
-		return "Access Denied"
+		return url + " is blocked on this network."
 	}
 	return i.internet.access(url)
 }
