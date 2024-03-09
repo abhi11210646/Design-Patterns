@@ -3,14 +3,14 @@ export default class Service1 {
     constructor(name) {
         this.name = name;
     }
-    async get() {
+    async get(options) {
         return 1;
 
     }
-    async delete() {
+    async delete(options) {
         return true;
     }
-    async save() {
+    async save(options) {
         return true;
     }
 }
