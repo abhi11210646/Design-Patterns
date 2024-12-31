@@ -2,10 +2,6 @@ package main
 
 import "fmt"
 
-type JSONer interface {
-	JSONdata()
-}
-
 type JSONAdaptor struct {
 	xml *XML
 }
